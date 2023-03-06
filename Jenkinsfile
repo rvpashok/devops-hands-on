@@ -23,7 +23,7 @@ pipeline {
         stage('Docker Build') {
             agent any
               steps {
-              	bat 'docker build -t rvpashok/firstdocker:latest .'
+              	bat 'docker build -t rvpashok/firstdocker:latest D:/var/'
               }
             }
     }
