@@ -20,5 +20,11 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
+        stage('Docker Build') {
+            agent any
+              steps {
+              	sh 'docker build -t rvpashok/firstdocker:latest .'
+              }
+            }
     }
 }
